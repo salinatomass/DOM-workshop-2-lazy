@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Web site created using create-snowpack-app"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="/_dist_/index.css"
+    />
+    <title>Workshop 2 - Lazy loading</title>
+  </head>
+  <body>
+    <div class="py-10 max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center">
+        <header>
+          <p
+            class="
+              text-base
+              leading-6
+              text-indigo-600
+              font-semibold
+              tracking-wide
+              uppercase
+            "
+          >
+            Platzi manipulacion DOM
+          </p>
+          <h1
+            class="
+              mt-2
+              text-3xl
+              leading-8
+              font-extrabold
+              tracking-tight
+              text-gray-900
+              sm:text-4xl sm:leading-10
+            "
+          >
+            Lazy loading
+          </h1>
+        </header>
+        <section class="max-w-2xl text-xl leading-7 text-gray-500 mx-auto">
+          <p class="mt-4">
+            Plugin en vanilla JavaScript para cargar imágenes con lazy load.
+          </p>
+          <p class="mt-4">
+            Las imágenes agregadas no se descargarán hasta que sean visibles en
+            la pantalla.
+          </p>
+          <p class="mt-4">🔍 Mira tu consola!</p>
+        </section>
+        <div class="mt-6">
+          <button
+            id="addButton"
+            class="block mx-auto p-4 text-white font-bold rounded bg-purple-600"
+            type="button"
+          >
+            Agregar imagen
+          </button>
+          <button
+            id="removeButton"
+            class="block mx-auto my-2 p-2 text-purple-600 font-bold"
+            type="button"
+          >
+            Limpiar
+          </button>
+        </div>
+
+        <div id="images"></div>
+
+        <footer class="text-center mt-48 p-6 text-sm text-gray-500">
+          <p>
+            Powered by
+            <a href="https://randomfox.ca" target="_blank"
+              >https://randomfox.ca</a
+            >
+            | Made by
+            <a target="_blank" href="https://github.com/salinatomass"
+              >@salinatomass</a
+            >
+          </p>
+        </footer>
+      </div>
+    </div>
+
+    <script type="module" src="/_dist_/index.js"></script>
+  </body>
+</html>
