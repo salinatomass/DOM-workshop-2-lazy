@@ -1,6 +1,25 @@
-/**
- * This file is just a silly example to show everything working in the browser.
- * When you're ready to start on your site, clear the file. Happy hacking!
- **/
+import { registerImage, state } from "./lazy";
+import { createImageNode } from "./utils";
 
-console.log('Happy hacking :)')
+const baseURL = "https://randomfox.ca/images";
+
+const $imagesContainer = document.getElementById("images");
+const addButton = document.getElementById("addButton");
+const removeButton = document.getElementById("removeButton");
+
+const addImage = () => {
+  const newImage = createImageNode(baseURL);
+  registerImage(newImage);
+
+  $imagesContainer.appendChild(newImage);
+
+  removeButton.addEventListener("click", deleteImage);
+};
+
+const deleteImage = () => {
+  $imagesContainer.innerHTML = "";
+  state.reset();
+  removeButton.removeEventListener("click", deleteImage);
+};
+
+addButton.addEventListener("click", addImage);
